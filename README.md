@@ -1,9 +1,9 @@
 # i2cget-dump
 因为i2cdump总是报错 i2cdump: block read failed，但是i2cget正常，所以使用i2cget来实现i2cdump格式的输出
 # 命令格式
-i2cget-dump.sh i2c_id i2c_address
+i2cget-dump.sh i2c-id i2c-address
 
-i2c_id 是i2c总线编号，i2c_address是i2c设备地址
+i2c-id 是i2c总线编号，i2c-address是i2c设备地址
 
 例子:
 ```shell
