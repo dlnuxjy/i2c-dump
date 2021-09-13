@@ -12,7 +12,7 @@ i2cget-dump.sh 0 0x5b
 # i2ctransfer-dump-96716K.sh
 使用i2ctransfer命令获取96716K芯片的所有寄存器信息(96716K是16bit寄存器地址)，实现i2cdump格式的输出
 ## 命令格式
-i2ctransfer-dump-96716F.sh i2c-id i2c-address
+i2ctransfer-dump-96716K.sh i2c-id i2c-address
 
 i2c-id 是i2c总线编号，i2c-address是i2c设备地址
 
@@ -42,7 +42,7 @@ d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 ```
-## 16bit输出 i2ctransfer-dump-96716F.sh
+## 16bit输出 i2ctransfer-dump-96716K.sh
 ```shell
        0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
 0000: 00 a0 00 00 00 00 00 ff 00 00 00 ff 00 00 00 6d
@@ -91,6 +91,7 @@ i2c-4   i2c             16340000.i2c                            I2C adapter
 50: -- -- -- -- -- -- -- -- -- -- UU 5b -- -- -- --
 60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 ```
+UU表示改设备正被使用中，通常是驱动程序使用中。
 ## i2cdump查看器件所有寄存器的值
 查看总线0，地址0x5b所有寄存器的值
 ```shell
