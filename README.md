@@ -9,7 +9,7 @@ i2c-id 是i2c总线编号，i2c-address是i2c设备地址
 ```shell
 i2cget-dump.sh 0 0x5b
 ```
-# i2ctransfer-dump-96716F.sh
+# i2ctransfer-dump-96716K.sh
 使用i2ctransfer命令获取96716K芯片的所有寄存器信息(96716K是16bit寄存器地址)，实现i2cdump格式的输出
 ## 命令格式
 i2ctransfer-dump-96716F.sh i2c-id i2c-address
