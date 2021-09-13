@@ -18,7 +18,7 @@ i2c-id 是i2c总线编号，i2c-address是i2c设备地址
 
 例子:
 ```shell
-i2ctransfer-dump-96716F.sh 0 0x5b
+i2ctransfer-dump-96716K.sh 0 0x5b
 ```
 
 # 显示输出格式
