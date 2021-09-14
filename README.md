@@ -1,3 +1,8 @@
+#功能一栏
+1. i2ctools的使用方法
+2. 脚本实现打印所有i2c寄存器数据，支持96716K芯片
+3. 脚本实现96716K芯片的写，自动计算crc和cnt
+
 # i2cget-dump.sh
 因为i2cdump总是报错 i2cdump: block read failed，但是i2cget正常，所以使用i2cget来实现i2cdump格式的输出
 ## 命令格式
