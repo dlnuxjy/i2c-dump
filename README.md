@@ -135,3 +135,26 @@ i2ctransfer -f -y 4 w3@0x28 0x00 0x00 0xaa
 1. 单字节写: CNT-MSB CNT-LSB Data CRC
 2. 多字节写: CNT-MSB CNT-LSB Data CRC Data CRC ... Data CRC
 
+# i2ctransfer-write-96716K.sh
+## 功能
+利用i2ctranster对96716K芯片进行写操作，因为96716K芯片待CRC校验和Counter功能，手动计算CRC和Counter很繁琐，该脚本可以实现CRC和Counter的自动计算，用户只需要关心写的内容即可。
+
+1. 获取Counter
+2. 计算CRC
+3. 发送数据
+## 命令格式
+i2ctransfer-write-96716K.sh i2c-id i2c-address "reg-MSB reg-LSB" data
+
+i2c-id 是i2c总线编号，i2c-address是i2c设备地址
+"reg-MSB reg-LSB" 是要写的寄存器地址
+data 是要写入的数据
+
+例子:
+```shell
+# i2ctransfer -f -y 4 w3@0x28 reg-MSB reg-LSB cnt-MSB cnt-LSB data crc
+# 向0x00 0x01寄存器写入之0x10
+20210914-1.0fer-write-96716K.sh 4 0x28 "0x00 0x01" 0x10
+```
+## crc8
+i2ctransfer-write-96716K.sh脚本用到了crc8计算crc值，使用时，将crc8放到/usr/bin路径下并增加可执行权限。
+
