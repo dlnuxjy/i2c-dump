@@ -143,7 +143,7 @@ i2ctransfer -f -y 4 w3@0x28 0x00 0x00 0xaa
 # i2ctransfer-write-96716K.sh
 ## 功能
 利用i2ctranster对96716K芯片进行写操作，因为96716K芯片待CRC校验和Counter功能，手动计算CRC和Counter很繁琐，该脚本可以实现CRC和Counter的自动计算，用户只需要关心写的内容即可。
-
+## 脚本流程
 1. 获取Counter
 2. 计算CRC
 3. 发送数据
